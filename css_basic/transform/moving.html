@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            display: inline-block;
+            background-color:aquamarine;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            animation: move 5s linear 2s infinite alternate;
+
+        }
+
+        @keyframes move{
+            0%{
+               background-color: lightblue;
+               transform: translate(0px, 0px);
+            }
+            25%{
+                background-color: lightcoral;
+               transform: translate(150px, 0px);
+            }
+            50%{
+                background-color: blueviolet;
+               transform: translate(150px, 150px);
+            }
+            75%{
+                background-color: rgb(32, 117, 30);
+               transform: translate(0px, 150px);
+            }
+            100%{
+                background-color: rgb(75, 92, 30);
+               transform: translate(0px, 0px);
+            }
+       
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
