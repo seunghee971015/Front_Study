@@ -1,0 +1,48 @@
+.header{
+    border-bottom: none;
+    position: fixed;
+    width: 100%;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 0;
+    background: var(--baseBackground);
+}
+.rap-header{
+    height: 60px;
+    max-width: 630px;
+    margin: 0;
+    padding: 0;
+}
+.title{
+    padding-top: 18px;
+    float: left;
+    -webkit-text-size-adjust: none;
+    display: block;
+    width: 74px;
+    height: 24px;
+}
+
+.btn-hamburger{
+    margin-left: 24px;
+    float: right;
+    margin-top: 16px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    
+}
+
+.btn-magnifier{
+    margin-left: 24px;
+    float: right;
+    margin-top: 16px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+}
