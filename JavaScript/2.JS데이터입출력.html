@@ -30,6 +30,7 @@
 
         area.innerText = "확인되었습니다."
         area.innerHTML = "<span style = 'background: gray;'>확인되었습니다.</span>";
+
     }
 </script>
 <br>
@@ -52,6 +53,11 @@
 <script>
     function testConfirm(){
         let isCheck = confirm("오늘 점심 드실겁니까?");
+        if(isCheck){
+            console.log('잘먹겠습니다');
+        } else {
+            console.log('점심패스');
+        }
         console.log(isCheck);
     }
 </script>
