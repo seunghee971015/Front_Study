@@ -182,7 +182,7 @@ const symbol2 = symbol('1');
 console.log(symbol1);
 
 /**
- * Object 타입(Jason타입 이라고도 함)
+ * Object 타입(Json타입 이라고도 함)
  * 
  * Map
  * 키: 벨류 쌍으로 이루어져있다.
