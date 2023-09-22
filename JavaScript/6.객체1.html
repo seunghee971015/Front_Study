@@ -57,7 +57,7 @@
 
             const area1 = document.getElementById('area1');
             area1.innerHTML += "product : " + product + "<br>";
-
+            
             // 객체의 속성에 접근하는 방법
             // 방법 1. 대괄호를 이용하는 방법 : 객체["속성값"]
             area1.innerHTML += "<br>객체명['속성명']으로 접근하기</b><br>";
@@ -70,6 +70,7 @@
             area1.innerHTML += "<br>객체,속성명으로 접근하기</b><br>";
             area1.innerHTML += "제품명 : " + product.name+ "<br>";
             area1.innerHTML += "가격 : " + product.price + "<br>";
+            area1.innerHTML += "사이즈 : " + product.size.height + " " + product.size.width + "<br>";
             area1.innerHTML += "원산지 : " + product.origin + "<br>";
             area1.innerHTML += "그외 : " + product.etc[1] + "<br>";
 
@@ -147,7 +148,7 @@
             const name = "최지원";
 
             const dog = {
-                name: "복설이",
+                name: "복실이",
                 kind: "말티즈",
                 eat: function(food){
                     area.innerHTML += "eat메소드가 호출되었습니다. <br>";
@@ -199,6 +200,8 @@
             area5.innerHTML += "age속성이 있을까? : " + ("age" in student) + "<br>";
 
             with(student){
+                // 객체명을 반복해서 사용하지 않고 객체 내부의 값을 가져오기 위해 사용
+                // with로 지정한 영역에서는 변수를 검사할 때 객체내에 존재하는지를 먼저 검사
             area5.innerHTML += "학생이름 : " + name + "<br>";
             area5.innerHTML += "국어 : " + kor + "<br>";
             area5.innerHTML += "수학 : " + math + "<br>";
@@ -218,10 +221,12 @@
             const student = {} // 빈 객체 생성
 
             //객체에 속성 추가
-            student.name = "홍길동"; // student['name'] = "홍길동";
-            student.hobby = ['롤','축구'];
-            student.dream = '프로게이머';
-            student.age = 20;
+            with(student){
+            name = "홍길동"; // student['name'] = "홍길동";
+            hobby = ['롤','축구'];
+            dream = '프로게이머';
+            age = 20;
+            }
 
             console.log(student);
 
