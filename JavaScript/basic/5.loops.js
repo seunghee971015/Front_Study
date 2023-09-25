@@ -23,7 +23,7 @@ for(let i = 1; i <= 9; i++){
 }
 
 /**
- * for .. in - Jason돌리는게 in(key값)
+ * for .. in - Json돌리는게 in(key값)
  */
 
 const human = {

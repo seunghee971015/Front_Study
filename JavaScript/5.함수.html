@@ -35,7 +35,7 @@
 
     <br>
 
-    <h3>* 익명 함수 (이름이 없는 함수)</h3>
+    <h3>* 익명 함수 (이름이 없는 함수)</h3> <!--자바에서는 없음(변수에 함수를 못넣어서)-->
     <pre>
     변수 | 속성 = function ([매개변수, 매개변수, ...]){
         해당함수 호출시 실행할 소스코드;
@@ -53,6 +53,7 @@
         const btn = document.getElementById('btn1'); // id가 btn1인 요소를 가져온다.
 
         btn.onclick = function(){ // 이벤트속성에 대입되는 function == 이벤트 핸들러
+            //변수에 담을수도 있고, 이벤트에 담을 수도 있다. 대신 어디에다가 꼭 넣어서 사용해야함(변수, 이름, 이벤트)
             document.getElementById('area2').innerHTML += '이벤트핸들러를 통해 실행됨<br>';
         }
 
@@ -107,9 +108,9 @@
 
     <!-- this : 현재 (이벤트가 발생한)요소객체-->
     <button onclick="test4(this);">버튼1</button>
-    <button onclick="test4(this.innerText);"><span>버튼2</span></button>
-    <input type="button" value="버튼3" onclick="test4(this.type);">
-    <button id = 'btn4' onclick="test4(this.id)">버튼4</button>
+    <button onclick="test4(this)"><span>버튼2</span></button>
+    <input type="button" value="버튼3" onclick="test4(this);">
+    <button id = 'btn4' onclick="test4(this)">버튼4</button>
     <button onclick="test4(this)">버튼5</button>
     <script>
         function test4(button){ // 이벤트가 발생한 요소에 동적인 효과
@@ -129,6 +130,7 @@
 
     <script>
         // 1~100사이의 랜덤값 구해서 반환해주는 함수 만들기
+        // 어차피 let이 받아서 리턴의 자료형 필요없음
         function ran(){
             const random = parseInt(Math.random() * 100 + 1); // 0 ~ 0.99
             return random;
@@ -160,6 +162,8 @@
             return tmp;
         
         }
+
+        let tmpFunk = test7();
 
 
         const tmp = function(num, callback){

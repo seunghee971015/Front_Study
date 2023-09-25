@@ -39,7 +39,7 @@
     <script>
         function test1(){
             const arr = ["망고", 4000, "필리핀산", [10, 12]];
-            // 자바스크립트에서의 배열 => 자바에서 컬렉션(ArrayList)
+            // 자바스크립트에서의 배열 => 자바에서 컬렉션(ArrayList), key는 다 String
 
             const product = {
                 "name" : "망고",
@@ -110,12 +110,15 @@
                 console.log(unit) 
             }
 
+            //키값을 하나씩 변수에 담음
             for(let i in arr){
                 console.log(i);
+                console.log((i + 1) + "번 : " + arr[i])
             }
 
             //in 뒤에 객체 제시시
             //반복문 돌 때마다 해당 객체의 속성명이 앞쪽에 변수에 담김
+            //배열이 아니라 of는 안됨
 
             const game = {
                 title : '오버워치',
@@ -147,6 +150,7 @@
 
             const name = "최지원";
 
+            //객체안에 들어있는 함수를 메소드라고 부름
             const dog = {
                 name: "복실이",
                 kind: "말티즈",
@@ -202,6 +206,7 @@
             with(student){
                 // 객체명을 반복해서 사용하지 않고 객체 내부의 값을 가져오기 위해 사용
                 // with로 지정한 영역에서는 변수를 검사할 때 객체내에 존재하는지를 먼저 검사
+                // 값 불러오는데 너무 많을 때 잠깐 씀, 이때만 쓴다
             area5.innerHTML += "학생이름 : " + name + "<br>";
             area5.innerHTML += "국어 : " + kor + "<br>";
             area5.innerHTML += "수학 : " + math + "<br>";
@@ -221,12 +226,10 @@
             const student = {} // 빈 객체 생성
 
             //객체에 속성 추가
-            with(student){
-            name = "홍길동"; // student['name'] = "홍길동";
-            hobby = ['롤','축구'];
-            dream = '프로게이머';
-            age = 20;
-            }
+            studen.name = "홍길동"; // student['name'] = "홍길동";
+            student.hobby = ['롤','축구'];
+            student.dream = '프로게이머';
+            student.age = 20; // student['age'] = 20;
 
             console.log(student);
 
@@ -245,6 +248,7 @@
             const area = document.getElementById('area6');
             area.innerHTML += student + "<hr>";
 
+            student.hobby = null; //이렇게 하면 키값이 삭제가 되지 않는다.
             delete(student.hobby);
             console.log(student)
 
