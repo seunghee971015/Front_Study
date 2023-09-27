@@ -16,6 +16,7 @@
     </style>
 </head>
 <br>
+<body>
     <h1>Window 객체</h1>
     <p>Window 객체는 자바스크립트의 최상위 객체이며 크게 BOB과 DOM으로 나뉨</p>
     <br>
@@ -23,7 +24,7 @@
     <p>- DOM(Document Object Model) : document객체</p>
 
     <br>
-    <h3>[window.]open("url","창이름","창의특성")</h3>
+    <h3>[window.]open("url","창이름","창의특성")</h3> <!--새창 열 때 많이 씀(광고나 회원가입 등)-->
     <button onclick="test1()">네이버</button>
     <script>
         function test1(){
@@ -101,6 +102,7 @@
             //     area.innerHTML = count++;
             // }, 1000)
 
+            //코드가 스쳐지나간 이후에 밑에 초마다 반복되서 실행 됨
             setInterval(function(){
                 const now = new Date();
 
@@ -127,7 +129,7 @@
 
     <hr>
 
-    <h2>BOM(Browser Object Model)</h2>
+    <h2>* BOM(Browser Object Model)</h2>
 
     <h3>location 객체</h3>
     <p>브라우저 주소창과 관련된 객체</p>
