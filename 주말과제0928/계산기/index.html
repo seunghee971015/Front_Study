@@ -26,6 +26,12 @@
                 <input type="text" id="expression" readonly>
             </td>
         </tr>
+        <tr>
+            <td colspan="4">
+                <input id="result" appendToExpression>
+            </td>
+        </tr>
+        
         <tr class="key">
             <td onclick="appendToExpression('C')">C</td>
             <td onclick="backspace()">bs</td>
@@ -56,9 +62,6 @@
             <td onclick="calculateResult()">=</td>
         </tr>
 
-        <div>
-            <p id="result">결과: </p>
-        </div>
     </table>
 
     <script src="calculator.js"></script>

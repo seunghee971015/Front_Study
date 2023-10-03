@@ -1,6 +1,9 @@
 let expression = '';
 
 function appendToExpression(value) {
+  const result = document.getElementById('result');
+  result.innerHTML;
+  
   // Check if the last character in the expression is an operator
   const lastChar = expression.charAt(expression.length - 1);
   const isLastCharOperator = ['+', '-', '*', '/', '%'].includes(lastChar);
@@ -32,8 +35,9 @@ function calculateResult() {
 
   try {
     const result = eval(expression);
-    document.getElementById('result').innerText = `결과: ${result}`;
+    document.getElementById('result').value = result;
     expression = result.toString();  // Clear the expression after calculating
+    
   } catch (error) {
     alert('잘못된 계산식입니다.');
   }
