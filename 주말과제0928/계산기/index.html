@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        td {
+        padding: 5px 10px;
+        text-align: center;
+        font-weight: 700;
+        }
+        input {
+            border: none;
+        }
+        .key{
+            background-color: gainsboro;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="4">
+                <input type="text" id="expression" readonly>
+            </td>
+        </tr>
+        <tr class="key">
+            <td onclick="appendToExpression('C')">C</td>
+            <td onclick="backspace()">bs</td>
+            <td onclick="appendToExpression('%')">%</td>
+            <td onclick="appendToExpression('/')">/</td>
+        </tr>
+        <tr class="key">
+            <td onclick="appendToExpression('7')">7</td>
+            <td onclick="appendToExpression('8')">8</td>
+            <td onclick="appendToExpression('9')">9</td>
+            <td onclick="appendToExpression('*')">x</td>
+        </tr>
+        <tr class="key">
+            <td onclick="appendToExpression('4')">4</td>
+            <td onclick="appendToExpression('5')">5</td>
+            <td onclick="appendToExpression('6')">6</td>
+            <td onclick="appendToExpression('-')">-</td>
+        </tr>
+        <tr class="key">
+            <td onclick="appendToExpression('1')">1</td>
+            <td onclick="appendToExpression('2')">2</td>
+            <td onclick="appendToExpression('3')">3</td>
+            <td onclick="appendToExpression('+')">+</td>
+        </tr>
+        <tr class="key">
+            <td colspan="2" onclick="appendToExpression('0')">0</td>
+            <td onclick="appendToExpression('.')">.</td>
+            <td onclick="calculateResult()">=</td>
+        </tr>
+
+        <div>
+            <p id="result">결과: </p>
+        </div>
+    </table>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
