@@ -10,12 +10,14 @@
         padding: 5px 10px;
         text-align: center;
         font-weight: 700;
+        cursor: pointer;
         }
         input {
             border: none;
         }
         .key{
             background-color: gainsboro;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -33,7 +35,7 @@
         </tr>
         
         <tr class="key">
-            <td onclick="appendToExpression('C')">C</td>
+            <td onclick="allDelete('C')">C</td>
             <td onclick="backspace()">bs</td>
             <td onclick="appendToExpression('%')">%</td>
             <td onclick="appendToExpression('/')">/</td>
