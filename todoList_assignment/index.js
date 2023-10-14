@@ -26,9 +26,12 @@ function addTodo(ev) {
 
 
         document.getElementById('bar').value = '';
+
+        if(todoList.onclick){
+            console.log(5555555);
+        }
     }
 
-    
     
 }
 
